@@ -1,0 +1,38 @@
+<head>
+</head>
+<body>
+<h1>Welcome to cOTP!</h1>
+<br/>
+
+<h2>Description</h2>
+<p>
+Handle these two keys with care! Don't tell them to anyone!
+To pair your OTP-Device, enter there two numbers in the config-menu of your OTP-Token.
+</p>
+<br/>
+
+<h2>Generate Keys</h2>
+<form action="generate_keys" method="get">
+	<button type="submit" id="generate_keys">Generate Keys</button>
+</form>
+
+<h2>KeyPair</h2>
+<code><pre>
+PSK: {{ psk }}
+Counter: {{ cntr }}
+</pre></code>
+
+<h2>Verify</h2>
+<p>
+To verify the pairing, generate your first OTP-Token on your device and enter it in the form below:
+</p>
+<form action="verify_key" method="get">
+	OTP-Token:
+	<input type="text" id="otp_token" name="token"/>
+	<br/>
+	<button type="submit" id="submit_otp">Submit</button>
+</form>
+<code><pre>
+Status: {{ success }}
+</pre></code>
+</body>
