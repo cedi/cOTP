@@ -19,15 +19,15 @@ class OTP_Backend:
         self.generator = ""
         self.verifyer = ""
 
-    def verify_token(self, token):
+    def verify(self, token):
         self.verified = self.verifyer.verify(token)
 
-    def generate_token(self):
+    def tokenize(self):
         self.token = self.generator.generate()
 
     def generate_keys(self):        
         self.psk = int(random.random() * 100000000)
-        self.cntr = int(random.random() * 100)
+        self.cntr = int(random.random() * 1000)
         self.generator = OTP_Generator(self.psk, self.cntr)
         self.verifyer = OTP_Verifyer(self.psk, self.cntr)
 
@@ -57,7 +57,7 @@ def generate_keys():
 
 @app.route("/generate_token")
 def generate_token():
-    backend.generate_token()
+    backend.tokenize()
     return render_page()
 
 @app.route("/verify_key")
@@ -67,7 +67,7 @@ def verify_key():
     
     token = request.args['token']
 
-    backend.verify_token(token)
+    backend.verify(token)
     return render_page()
 
 if __name__ == "__main__":
