@@ -2,14 +2,12 @@
 </head>
 <body>
 <h1>Welcome to cOTP!</h1>
-<br/>
 
 <h2>Description</h2>
 <p>
 Handle these two keys with care! Don't tell them to anyone!
 To pair your OTP-Device, enter there two numbers in the config-menu of your OTP-Token.
 </p>
-<br/>
 
 <h2>Generate Keys</h2>
 <form action="generate_keys" method="get">
@@ -20,6 +18,17 @@ To pair your OTP-Device, enter there two numbers in the config-menu of your OTP-
 <code><pre>
 PSK: {{ psk }}
 Counter: {{ cntr }}
+</pre></code>
+
+<h2>Generate Token</h2>
+<p>
+To generate an token please click the "Generate" Button below
+</p>
+<form action="generate_token" method="get">
+	<button type="submit" id="generate_otp">Generate</button>
+</form>
+<code><pre>
+Token: {{ token }}
 </pre></code>
 
 <h2>Verify</h2>

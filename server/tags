@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+OTP_Backend	server.py	/^class OTP_Backend:$/;"	c
+OTP_Generator	generator.py	/^class OTP_Generator:$/;"	c
+OTP_Verifyer	verifyer.py	/^class OTP_Verifyer:$/;"	c
+__init__	generator.py	/^    def __init__(self, psk, cntr):$/;"	m	class:OTP_Generator
+__init__	server.py	/^    def __init__(self):$/;"	m	class:OTP_Backend
+__init__	verifyer.py	/^    def __init__(self, psk, cntr):$/;"	m	class:OTP_Verifyer
+app	server.py	/^app = Flask(__name__)$/;"	v
+backend	server.py	/^backend = OTP_Backend()$/;"	v
+generate	generator.py	/^    def generate(self):$/;"	m	class:OTP_Generator
+generate_keys	server.py	/^    def generate_keys(self):        $/;"	m	class:OTP_Backend
+generate_keys	server.py	/^def generate_keys():$/;"	f
+generate_token	generator.py	/^    def generate_token(cntr, psk):$/;"	m	class:OTP_Generator
+generate_token	server.py	/^    def generate_token(self):$/;"	m	class:OTP_Backend
+generate_token	server.py	/^def generate_token():$/;"	f
+generate_token	verifyer.py	/^    def generate_token(cntr, psk):$/;"	m	class:OTP_Verifyer
+generated_token	server.py	/^generated_token = ""$/;"	v
+render_page	server.py	/^def render_page():$/;"	f
+show_index	server.py	/^def show_index():$/;"	f
+verify	verifyer.py	/^    def verify(self, otp_token):$/;"	m	class:OTP_Verifyer
+verify_key	server.py	/^def verify_key():$/;"	f
+verify_token	server.py	/^    def verify_token(self, token):$/;"	m	class:OTP_Backend
