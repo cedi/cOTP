@@ -9,7 +9,6 @@ from verifyer import OTP_Verifyer
 
 app = Flask(__name__)
 
-
 class OTP_Backend:
     def __init__(self):
         self.psk=""
